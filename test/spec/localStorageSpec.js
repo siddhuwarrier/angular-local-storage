@@ -125,7 +125,7 @@ describe('localStorageService', function() {
     };
   }
 
-  beforeEach(module('LocalStorageModule', function($provide) {
+  beforeEach(module('ConfigurableLocalStorageModule', function($provide) {
 
     $provide.value('$window', {
       localStorage: localStorageMock()
@@ -516,7 +516,7 @@ describe('localStorageService', function() {
   //sessionStorage
   describe('SessionStorage', function() {
 
-    beforeEach(module('LocalStorageModule', function($provide) {
+    beforeEach(module('ConfigurableLocalStorageModule', function($provide) {
       $provide.value('$window', {
         sessionStorage: localStorageMock()
       });
@@ -560,7 +560,7 @@ describe('localStorageService', function() {
   //cookie
   describe('Cookie', function() {
 
-    beforeEach(module('LocalStorageModule', function($provide) {
+    beforeEach(module('ConfigurableLocalStorageModule', function($provide) {
       $provide.value('$window', {
         localStorage: false,
         sessionStorage: false,
@@ -664,7 +664,7 @@ describe('localStorageService', function() {
   //cookie disabled
   describe('No Cookie', function() {
 
-    beforeEach(module('LocalStorageModule', function($provide) {
+    beforeEach(module('ConfigurableLocalStorageModule', function($provide) {
       $provide.value('$window', {
         navigator: {
           cookieEnabled: false

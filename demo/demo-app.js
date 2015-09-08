@@ -1,5 +1,5 @@
 'use strict';
-window.angular.module('demoModule', ['LocalStorageModule'])
+window.angular.module('demoModule', ['ConfigurableLocalStorageModule'])
 .config(function(localStorageServiceProvider){
   localStorageServiceProvider.setPrefix('demoPrefix');
   // localStorageServiceProvider.setStorageCookieDomain('example.com');

@@ -1,6 +1,6 @@
 /**
  * An Angular module that gives you access to the browsers local storage, and allows you to additionally change the storage type on the fly (forked from angular-local-storage)
- * @version v0.3.0 - 2015-09-08
+ * @version v0.3.2 - 2015-09-08
  * @link https://github.com/siddhuwarrier/angular-local-storage
  * @author grevory <greg@gregpike.ca>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -103,7 +103,7 @@ angularLocalStorage.provider('localStorageService', function() {
       return prefix + key;
     };
     // Checks the browser to see if local storage is supported
-    var browserSupportsLocalStorage = (function () {
+    var __browserSupportsLocalStorage = function () {
       try {
         var supported = (storageType in $window && $window[storageType] !== null);
 
@@ -125,7 +125,9 @@ angularLocalStorage.provider('localStorageService', function() {
         $rootScope.$broadcast('LocalStorageModule.notification.error', e.message);
         return false;
       }
-    }());
+    };
+
+    var browserSupportsLocalStorage = (__browserSupportsLocalStorage());
 
     // Directly adds a value to local storage
     // If local storage is not available in the browser use cookies
@@ -389,8 +391,11 @@ angularLocalStorage.provider('localStorageService', function() {
       return storageType;
     };
 
-    var setStorageType = function(storageType) {
-      self.storageType = storageType;
+    var setStorageType = function(toChange) {
+      if (toChange !== storageType) {
+        storageType = toChange;
+        browserSupportsLocalStorage = __browserSupportsLocalStorage();
+      }
     };
 
     // Add a listener on scope variable to save its changes to local storage
@@ -428,6 +433,7 @@ angularLocalStorage.provider('localStorageService', function() {
     return {
       isSupported: browserSupportsLocalStorage,
       getStorageType: getStorageType,
+      setStorageType: setStorageType,
       set: addToLocalStorage,
       add: addToLocalStorage, //DEPRECATED
       get: getFromLocalStorage,

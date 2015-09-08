@@ -1,6 +1,6 @@
 {
   "name": "angular-configurable-local-storage",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "An Angular module that gives you access to the browsers local storage, and allows you to additionally change the storage type on the fly (forked from angular-local-storage)",
   "homepage": "https://github.com/siddhuwarrier/angular-local-storage",
   "main": "./dist/angular-configurable-local-storage.js",
