@@ -53,7 +53,7 @@ $ npm install angular-local-storage
 ```
 **(2)** Include `angular-local-storage.js` (or `angular-local-storage.min.js`) from the [dist](https://github.com/grevory/angular-local-storage/tree/master/dist) directory in your `index.html`, after including Angular itself.
 
-**(3)** Add `'LocalStorageModule'` to your main module's list of dependencies.
+**(3)** Add `'ConfigurableLocalStorageModule'` to your main module's list of dependencies.
 
 When you're done, your setup should look similar to the following:
 

@@ -1,14 +1,15 @@
 {
-  "name": "angular-local-storage",
-  "homepage": "http://gregpike.net/demos/angular-local-storage/demo.html",
+  "name": "angular-configurable-local-storage",
+  "homepage": "",
   "authors": [
     "grevory <greg@gregpike.ca>"
   ],
   "contributors": [
-    "Ariel Mashraki <ariel@mashraki.co.il>"
+    "Ariel Mashraki <ariel@mashraki.co.il>",
+    "Siddhu Warrier <siddhu@siddhuw.info>"
   ],
-  "description": "An Angular module that gives you access to the browser's local storage",
-  "main": "./dist/angular-local-storage.js",
+  "description": "An Angular module that gives you access to the browser's local storage (forked from angular-local-storage to support changing storage type on the fly)",
+  "main": "./dist/angular-configurable-local-storage.js",
   "keywords": [
     "AngularJS",
     "Angular",

@@ -1,3 +1,21 @@
+/**
+ * An Angular module that gives you access to the browsers local storage, and allows you to additionally change the storage type on the fly (forked from angular-local-storage)
+ * @version v0.3.0 - 2015-09-08
+ * @link https://github.com/siddhuwarrier/angular-local-storage
+ * @author grevory <greg@gregpike.ca>
+ * @license MIT License, http://www.opensource.org/licenses/MIT
+ */
+(function ( window, angular, undefined ) {
+/*jshint globalstrict:true*/
+'use strict';
+
+var isDefined = angular.isDefined,
+  isUndefined = angular.isUndefined,
+  isNumber = angular.isNumber,
+  isObject = angular.isObject,
+  isArray = angular.isArray,
+  extend = angular.extend,
+  toJson = angular.toJson;
 var angularLocalStorage = angular.module('ConfigurableLocalStorageModule', []);
 
 angularLocalStorage.provider('localStorageService', function() {
@@ -430,3 +448,4 @@ angularLocalStorage.provider('localStorageService', function() {
     };
   }];
 });
+})( window, window.angular );

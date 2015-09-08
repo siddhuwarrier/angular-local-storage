@@ -1,15 +1,15 @@
 {
-  "name": "angular-local-storage",
-  "version": "0.2.2",
-  "description": "An Angular module that gives you access to the browsers local storage",
-  "homepage": "https://github.com/grevory/angular-local-storage",
-  "main": "./dist/angular-local-storage.js",
+  "name": "angular-configurable-local-storage",
+  "version": "0.3.0",
+  "description": "An Angular module that gives you access to the browsers local storage, and allows you to additionally change the storage type on the fly (forked from angular-local-storage)",
+  "homepage": "https://github.com/siddhuwarrier/angular-local-storage",
+  "main": "./dist/angular-configurable-local-storage.js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/grevory/angular-local-storage.git"
+    "url": "https://github.com/siddhuwarrier/angular-local-storage.git"
   },
   "keywords": [
     "AngularJS",
@@ -18,11 +18,12 @@
   ],
   "author": "grevory <greg@gregpike.ca>",
   "contributors": [
-    "Ariel Mashraki <ariel@mashraki.co.il>"
+    "Ariel Mashraki <ariel@mashraki.co.il>",
+    "Siddhu Warrier <siddhu@siddhuw.info>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/grevory/angular-local-storage/issues"
+    "url": "https://github.com/siddhuwarrier/angular-local-storage/issues"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -31,7 +32,7 @@
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-uglify": "*",
     "grunt-karma": "latest",
-    "karma": "~0.12.16",
+    "karma": "~0.13.0",
     "karma-jasmine": "~0.1.5",
     "karma-coverage": "^0.2.6",
     "karma-phantomjs-launcher": "~0.1.4",
